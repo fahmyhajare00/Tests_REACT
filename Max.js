@@ -4,5 +4,12 @@ const clients = [
 { nom: "Chaouki", montant: 5500 },
 { nom: "Ramoun", montant: 7700 },
 ];
-const maxMontant = Math.max(...clients.map(client => client.montant));
-console.log(maxMontant); 
+const maxMontant = clients.reduce((max, client) =>
+  client.montant > max ? client.montant : max
+, 0);
+console.log(maxMontant);
+
+
+
+
+
